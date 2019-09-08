@@ -3,6 +3,9 @@
 #include <string>
 #include <SDL.h>
 #include "TObject.h"
+#include "Animation.h"
+#include <vector>
+
 
 
 class Player :
@@ -18,9 +21,26 @@ public:
 	~Player();
 	void handleEvent(const SDL_Event& e);
 
+	void show();
+	void doNothing();
+
 
 
 private:
+
+	//TODO: 实现物体各种动画的渲染
+	//四种动画,四个方向：站立，走路，攻击，死亡，跳跃
+
+	std::vector<Animation*> _stand_animation;
+	std::vector<Animation*> _walk_animation;
+	std::vector<Animation*> _attack_animation;
+	std::vector<Animation*> _death_animation;
+	std::vector<Animation*> _jump_animation;
+
+
+	Animation* pre_animation;
+
+
 };
 
 

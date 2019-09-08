@@ -1,16 +1,18 @@
 #pragma once
 #include"TObject.h"
 
-TObject::TObject(const SDL_Rect& dst,const SDL_Rect& src,const std::string& path,
-	const std::string& name,int& frames, Render* renderer,int render_priority)
+TObject::TObject(const SDL_Rect& dst,const SDL_Rect& src,
+	const std::string& name,int& frame,int render_priority)
 {
-	
-	_Animation = new Animation(path, renderer,name,src,frames);
+	//Ä¬ÈÏ×´Ì¬ÊÇ Õ¾Á¢
+	_state = STATE::STAND;
+	//Ä¬ÈÏ×´Ì¬ÊÇ ×ó±ß
+	_direction = Animation_DIRECTION::ANIMATION_LEFT;
+
 
 
 
 	_dst = dst;
-
 	_render_priority = render_priority;
 
 }
@@ -20,16 +22,7 @@ TObject::TObject(const SDL_Rect& dst,const SDL_Rect& src,const std::string& path
 TObject::~TObject()
 {
 	
-
-	delete _Animation;
 }
-
-void TObject::show()
-{
-	_Animation->render(_dst);
-}
-
-
 
 
 
@@ -68,6 +61,33 @@ int TObject::getY() const
 {
 	return _dst.y;
 }
+
+const SDL_Rect& TObject::getXY() const
+{
+	return _dst;
+}
+
+STATE TObject::getState() const
+{
+	return _state;
+}
+
+void TObject::setState(STATE state)
+{
+	_state = state;
+}
+
+Animation_DIRECTION TObject::getDirection() const
+{
+	return _direction;
+}
+
+void TObject::setDirection(Animation_DIRECTION direction)
+{
+	_direction = direction;
+}
+
+
 
 void TObject::setPriorty(int priority)
 {

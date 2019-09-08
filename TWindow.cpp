@@ -12,6 +12,8 @@ TWindow::~TWindow()
 	//释放渲染器
 	delete this->_renderer;
 
+	//释放地图
+	delete map;
 
 
 	//
@@ -37,12 +39,17 @@ void TWindow::Init(const std::string &t, unsigned int x = SDL_WINDOWPOS_CENTERED
 
 	//初始化相机
 	Camera::getCamera()->Init(0,0);
+	
 
 	//创建窗口
 	this->_window = SDL_CreateWindow(_title.c_str(), _x, _y, _width, _height, SDL_WINDOW_RESIZABLE);
 
 	//初始化渲染器
 	this->_renderer = new Render(this->_window);
+
+	//初始化地图,地图初始化应该在渲染器后面
+	map = new Map(_renderer);
+	map->loadMap("C:\\Users\\Guaidaoyiyoudao\\Pictures\\Battleground2.png");
 
 }
 
@@ -61,6 +68,9 @@ void TWindow::addObject(TObject* obj)
 //渲染物体
 void TWindow::renderObjects()const
 {
+	//地图优先渲染
+	map->renderMap();
+
 	for (auto obj : objects)
 	{
 		obj->show();
@@ -79,5 +89,13 @@ void TWindow::responseEvent(const SDL_Event& e)
 	for (auto obj : objects)
 	{
 		obj->handleEvent(e);
+	}
+}
+
+void TWindow::nothingHappen()
+{
+	for (auto obj : objects)
+	{
+		obj->doNothing();
 	}
 }

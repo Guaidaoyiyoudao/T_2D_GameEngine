@@ -8,6 +8,7 @@
 #include <vector>
 #include <SDL.h>
 #include <string>
+#include "Map.h"
 #include "TObject.h"
 #include "Render.h"
 #include "Camera.h"
@@ -46,6 +47,7 @@ public:
 
 	//负责为各个组件
 	void responseEvent(const SDL_Event& e);
+	void nothingHappen();
 
 
 
@@ -70,6 +72,8 @@ private:
 
 	SDL_Window* _window = nullptr;
 	Render* _renderer;
+	//地图
+	Map* map;
 	std::vector<TObject*> objects;
 
 	/*

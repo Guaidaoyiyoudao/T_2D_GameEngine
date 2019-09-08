@@ -8,6 +8,8 @@ void Camera::Init(int x=0, int y=0)
 	_x = x;
 	_y = y;
 
+	_following = false;
+
 }
 
 void Camera::move(MOVE_DIRECTION direction)

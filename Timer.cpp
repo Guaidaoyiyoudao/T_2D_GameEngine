@@ -53,7 +53,7 @@ void Timer::unpause()
 		pauseTicks = 0;
 	}
 }
-
+//TODO: wancheng
 int Timer::getTicks() const
 {
 	int time = 0;

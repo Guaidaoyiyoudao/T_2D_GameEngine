@@ -133,6 +133,7 @@
     <ClCompile Include="EventHandler.cpp" />
     <ClCompile Include="ListWidget.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Render.cpp" />
     <ClCompile Include="Resouce.cpp" />
@@ -147,9 +148,11 @@
     <ClInclude Include="constness.h" />
     <ClInclude Include="EventHandler.h" />
     <ClInclude Include="ListWidget.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Render.h" />
     <ClInclude Include="Resouce.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="TObject.h" />
     <ClInclude Include="TTexture.h" />
@@ -171,6 +174,10 @@
     <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightRun_strip.png" />
     <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightShield_strip.png" />
     <Image Include="..\..\..\Pictures\plane.png" />
+    <Image Include="bitmap1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GUIEngine.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -22,7 +22,7 @@ public:
 	//…Ë÷√Õ∏√˜∂»
 	void setBlendMode(const SDL_BlendMode& blending);
 
-	void render(SDL_Rect* srcRect, SDL_Rect* renderRect);
+	void render(const SDL_Rect* srcRect, const SDL_Rect* renderRect);
 
 	int getWidth()const;
 	int getHeight()const;

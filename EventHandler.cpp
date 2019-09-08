@@ -49,12 +49,12 @@ void EventHanlder::EventListen()
 				int x = _event.button.x;
 				int y = _event.button.y;
 				SDL_Rect dst = { x,y,64,64 };
-				SDL_Rect src = { 0,0,144,64 };
+				SDL_Rect src = { 0,0,64,64 };
 				int frames = 22;
 				Player* p = 
 					new Player(dst,src,
-						"C:\\Users\\Guaidaoyiyoudao\\Pictures\\KnightAttack_strip.png",
-						"NPC Death",frames,window->getRenderer());
+						"C:\\Users\\Guaidaoyiyoudao\\Pictures\\character.png",
+						"character",frames,window->getRenderer());
 
 				window->addObject(p);
 
@@ -69,12 +69,20 @@ void EventHanlder::EventListen()
 				switch (_event.key.keysym.sym)
 				{
 					MOVE_DIRECTION direction;
-				case SDLK_q:
+				case SDLK_LEFT:
 					direction = MOVE_DIRECTION::LEFT;
 					Camera::getCamera()->move(direction);
 					break;
-				case SDLK_e:
+				case SDLK_RIGHT:
 					direction = MOVE_DIRECTION::RIGHT;
+					Camera::getCamera()->move(direction);
+					break;
+				case SDLK_UP:
+					direction = MOVE_DIRECTION::UP;
+					Camera::getCamera()->move(direction);
+					break;
+				case SDLK_DOWN:
+					direction = MOVE_DIRECTION::DOWN;
 					Camera::getCamera()->move(direction);
 					break;
 			
@@ -87,6 +95,10 @@ void EventHanlder::EventListen()
 			//对象自处理事件
 			
 			window->responseEvent(_event);
+		}
+		else
+		{
+			window->nothingHappen();
 		}
 
 		int frameTicks = frameTimer.getTicks();

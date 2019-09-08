@@ -69,14 +69,18 @@ SDL_Texture* TTexture::getTexture() const
 }
 
 
-void TTexture::render(SDL_Rect* srcRect,SDL_Rect* renderRect)
+// srcRect是物体的材质渲染坐标,rendererRect是物体在世界中的坐标
+void TTexture::render(const SDL_Rect* srcRect,const SDL_Rect* renderRect)
 {
+	SDL_Rect screen_coor = *renderRect;
 	int width, height;
 	SDL_GetWindowSize(TWindow::GetWindow()->getWindow(), &width, &height);
-	int screen_x = renderRect->x - Camera::getCamera()->getX();
-	int screen_y = renderRect->y - Camera::getCamera()->getY();
-	if(screen_x>0&&screen_x<width&&screen_y>0&&screen_y<height)
-		SDL_RenderCopy(_renderer->getRenderer(), _texture,srcRect,renderRect);
+	screen_coor.x = renderRect->x - Camera::getCamera()->getX();
+	screen_coor.y = renderRect->y - Camera::getCamera()->getY();
+	//位于屏幕里面才渲染
+	if(screen_coor.x>-screen_coor.w&&screen_coor.x<width&&screen_coor.y>-screen_coor.h&&screen_coor.y<height)
+		SDL_RenderCopy(_renderer->getRenderer(), _texture, srcRect, &screen_coor);
+
 }
 void TTexture::setBlendMode(const SDL_BlendMode& blending)
 {

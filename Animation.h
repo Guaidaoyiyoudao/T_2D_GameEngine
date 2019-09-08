@@ -15,14 +15,17 @@ class Animation
 public:
 
 	Animation(const std::string& path, Render* renderer, const std::string& name, const SDL_Rect& src, int frames);
-	void render(SDL_Rect& dst);
+	Animation(TTexture* texture, const std::string& name, const SDL_Rect& src, int frames);
+	void render(const SDL_Rect& dst);
+	bool isFinished()const;
 	~Animation();
 
 private:
 	//动画名字
 	std::string _name;
 
-
+	//动画是否完成
+	bool _animation_finished;
 	//
 	TTexture* _animation;
 
