@@ -158,27 +158,6 @@
     <ClInclude Include="TTexture.h" />
     <ClInclude Include="TWindow.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightAttack_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightDeath_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightIdle_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightJumpAndFall_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightRoll_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightRun_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightShield_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightAttack_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightDeath_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightIdle_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightJumpAndFall_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightRoll_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightRun_strip.png" />
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightShield_strip.png" />
-    <Image Include="..\..\..\Pictures\plane.png" />
-    <Image Include="bitmap1.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="GUIEngine.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

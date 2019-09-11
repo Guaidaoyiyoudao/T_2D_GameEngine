@@ -1,157 +1,101 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="src">
+      <UniqueIdentifier>{bda726d1-2756-4026-b259-c9249cdf8bb3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件">
+    <Filter Include="src\头文件">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="src\源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="TWindow.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="EventHandler.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="Render.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="Resouce.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="TTexture.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="TObject.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="Animation.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="ListWidget.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
-      <Filter>源文件</Filter>
+      <Filter>src\源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TObject.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="TWindow.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="EventHandler.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="Render.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="Resouce.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="Timer.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="constness.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="TTexture.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="Animation.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="ListWidget.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>头文件</Filter>
+      <Filter>src\头文件</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightAttack_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightDeath_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightIdle_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightJumpAndFall_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightRoll_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightRun_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\KnightShield_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightAttack_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightDeath_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightIdle_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightJumpAndFall_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightRoll_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightRun_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\gameResource\Knight\noBKG_KnightShield_strip.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\plane.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="bitmap1.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="GUIEngine.rc">
-      <Filter>资源文件</Filter>
-    </ResourceCompile>
   </ItemGroup>
 </Project>

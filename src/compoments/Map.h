@@ -11,7 +11,7 @@ public:
 	
 
 	bool loadMap(std::string path);
-	void renderMap()const;
+	void  renderMap()const;
 
 
 

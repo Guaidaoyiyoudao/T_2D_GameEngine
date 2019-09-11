@@ -39,12 +39,10 @@ Player::Player(const SDL_Rect& dst,const SDL_Rect& src,const std::string& path, 
 
 Player::~Player()
 {
+	//因为共一个材质类，所以是释放一个就好了
 	if (_walk_animation[0] != nullptr)
 		delete _walk_animation[0];
-	if (_attack_animation[0] != nullptr)
-		delete _attack_animation[0];
-	if (_stand_animation[0] != nullptr)
-		delete _stand_animation[0];
+
 }
 
 void Player::handleEvent(const SDL_Event& e)
